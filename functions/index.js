@@ -21,12 +21,12 @@ exports.sendContactMessage = functions.database.ref('/messages/{pushKey}').onWri
     const val = snapshot;
     
     const mailOptions = {
-      to: 'moreno.medran@gmail.com',
+      to: 'partyapp.bynotcalpi@gmail.com',
       subject: `Contact form filled in! ${val.name}`,
       html: val.html
     };
     return mailTransport.sendMail(mailOptions).then(() => {
-      return console.log('Mail sent to: moreno.medran@gmail.com')
+      return console.log('Mail sent to: partyapp.bynotcalpi@gmail.com')
     });
   });
 

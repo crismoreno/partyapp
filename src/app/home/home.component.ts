@@ -11,7 +11,7 @@ import { AngularFireDatabase} from "angularfire2/database";
 export class HomeComponent implements OnInit {
   form: FormGroup;
 
-  constructor(  private fb: FormBuilder, private af: AngularFireDatabase) { 
+  constructor(  private fb: FormBuilder, private af: AngularFireDatabase) {
     this.createForm();
   }
 
@@ -20,7 +20,9 @@ export class HomeComponent implements OnInit {
     this.form = this.fb.group({
       name: ['', Validators.required],
       email: ['', Validators.required],
-      message: ['', Validators.required],
+      comming: ['', Validators.required],
+      pizza: ['', Validators.required],
+      message: ['', Validators.required]
     });
   }
 
@@ -28,15 +30,17 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit() {
-    const {name, email, message} = this.form.value;
+    const {name, email, message, comming, pizza} = this.form.value;
     const date = Date();
     const html = `
       <div>From: ${name}</div>
       <div>Email: <a href="mailto:${email}">${email}</a></div>
       <div>Date: ${date}</div>
+      <div>Comming: ${comming}</div>
+      <div>Pizza: ${pizza}</div>
       <div>Message: ${message}</div>
     `;
-    let formRequest = { name, email, message, date, html };
+    let formRequest = { name, email, message, date, html, comming, pizza };
     this.af.list('/messages').push(formRequest);
     this.form.reset();
   }

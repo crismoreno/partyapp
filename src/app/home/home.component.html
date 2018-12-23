@@ -98,12 +98,54 @@
     </div>
     <div class="contact-form">
         <strong>TELL ME ABOUT IT</strong>
-        <h1>Information Request</h1>
-        <form [formGroup]="form" #contactForm="ngForm" (ngSubmit)="onSubmit()">
-          <input type="text" placeholder="Name" formControlName="name">
-          <input type="text" placeholder="Email" formControlName="email">
+        <form [formGroup]="form" #contactForm="ngForm" (ngSubmit)="onSubmit()" class="needs-validation">
+
+            <div class="form-group">
+                <label for="contact-name">Name</label>
+                <input type="text" class="form-control" formControlName="name" id="contact-name" placeholder="Daenerys Targaryen" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-mail">Email</label>
+                <input type="email" class="form-control" formControlName="email" id="contact-mail" placeholder="lakhaleese@gmail.com" required>
+            </div>
+
+            <input type="radio" name="comming" value="yes" formControlName="comming" required>Yes!! <br>
+            <input type="radio" name="comming" value="no" formControlName="comming" required>No <br>
+            <input type="radio" name="comming" value="depends" formControlName="comming" required>It depends... <br>
+
+            <div class="form-group">
+                <label for="contact-pizza">Pizza you would like?</label>
+                <textarea class="form-control" id="contact-pizza" formControlName="pizza" rows="3" placeholder="Crispy Bacon"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Message</label>
+                <textarea class="form-control" id="message" formControlName="message" rows="3" placeholder="Sorry Cris, I won't come... I have a queen to kill"></textarea>
+            </div>
+
+            <button type="submit" [disabled]="form.invalid">Submit</button>
+        </form>
+
+
+
+
+
+
+        <!-- <form [formGroup]="form" #contactForm="ngForm" (ngSubmit)="onSubmit()" class="d-flex flex-column">
+
+            
+            <input type="text" placeholder="Name" formControlName="name" required>
+            <input type="text" placeholder="Email" formControlName="email" required>
+
+            <input type="radio" name="comming" value="yes" formControlName="comming" required>Yes <br>
+            <input type="radio" name="comming" value="no" formControlName="comming" required>Yo <br>
+            <input type="radio" name="comming" value="depends" formControlName="comming" required>It depends <br>
+
+
+
           <textarea placeholder="Message" formControlName="message"></textarea>
           <button type="submit" [disabled]="form.invalid">Submit</button>
-        </form>
+        </form> -->
     </div>
 </div>
