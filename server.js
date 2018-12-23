@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static('./dist/notcalpi20'));
+app.use(express.static('./dist/partyapp'));
 
 app.get('/*', (req, res)=>{
   res.sendFile(path.join(__dirname, '/dist/partyapp/index.html'));
