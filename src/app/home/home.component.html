@@ -34,21 +34,21 @@
             </div>
         </div>
         <div class="guest-card left">
-            <img src="../assets/img/guests/cristinamoreno.jpg">
+            <img src="../assets/img/guests/andreavives.jpg">
             <div class="guest-card-info">
                 <p class="guest-card-info-name">Andrea Vives</p>
                 <i class="guest-card-info-job"> Previous job Partner</i>
             </div>
         </div>
         <div class="guest-card right">
-            <img src="../assets/img/guests/cristinamoreno.jpg">
+            <img src="../assets/img/guests/eugeniamoix.jpg">
             <div class="guest-card-info">
                 <p class="guest-card-info-name">Eugènia Moix</p>
                 <i class="guest-card-info-job"> Childhood Friend</i>
             </div>
         </div>
         <div class="guest-card left">
-            <img src="../assets/img/guests/cristinamoreno.jpg">
+            <img src="../assets/img/guests/monicamatutes.jpg">
             <div class="guest-card-info">
                 <p class="guest-card-info-name">Mònica Matutes</p>
                 <i class="guest-card-info-job"> Childhood Friend</i>
@@ -76,14 +76,14 @@
             </div>
         </div>
         <div class="guest-card left">
-            <img src="../assets/img/guests/cristinamoreno.jpg">
+            <img src="../assets/img/guests/carlotagasso.jpg">
             <div class="guest-card-info">
                 <p class="guest-card-info-name">Carlota Gassó</p>
                 <i class="guest-card-info-job"> University Partner</i>
             </div>
         </div>
         <div class="guest-card right">
-            <img src="../assets/img/guests/cristinamoreno.jpg">
+            <img src="../assets/img/guests/alejandropalomes.jpg">
             <div class="guest-card-info">
                 <p class="guest-card-info-name">Alejandro Palomes</p>
                 <i class="guest-card-info-job"> Boyfriend</i>
@@ -98,5 +98,12 @@
     </div>
     <div class="contact-form">
         <strong>TELL ME ABOUT IT</strong>
+        <h1>Information Request</h1>
+        <form [formGroup]="form" #contactForm="ngForm" (ngSubmit)="onSubmit()">
+          <input type="text" placeholder="Name" formControlName="name">
+          <input type="text" placeholder="Email" formControlName="email">
+          <textarea placeholder="Message" formControlName="message"></textarea>
+          <button type="submit" [disabled]="form.invalid">Submit</button>
+        </form>
     </div>
 </div>

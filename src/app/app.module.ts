@@ -1,3 +1,8 @@
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
@@ -24,7 +29,17 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes),
     FormsModule,
-    RouterModule
+    RouterModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp({
+      apiKey: environment.apiKey,
+      authDomain: environment.authDomain,
+      databaseURL: environment.databaseURL,
+      storageBucket: environment.storageBucket,
+      messagingSenderId: environment.messagingSenderId
+    }),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent]
