@@ -1,7 +1,7 @@
 // CSS DEBBUGING
-div{
-  border: 1px solid black;
-}
+// div{
+//   border: 1px solid black;
+// }
 
 
 @mixin debug {
@@ -21,7 +21,7 @@ div{
   }
   
   //COLOURS
-  
+  $yellow: #ffff00;
   
   // TYPOGRAPHY
   //PRODUCT SANS

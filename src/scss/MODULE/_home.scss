@@ -1,0 +1,40 @@
+.home-container{
+    background-color: $yellow;
+    width: 600px;
+    margin-top: 120px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+    padding: 0 60px 0 60px;
+    img{
+        height: 130px;
+        width: 130px;
+        margin: -65px auto 30px auto;
+    }
+    .host, .party, .location{
+        margin: 0 0 20px 0;
+        background-color: white;
+        border-radius: 14px;
+        padding: 5px 20px;
+        strong{
+            font-size: 20px;
+        }
+        p{
+            margin: 0;
+            font-size: 16px;
+            padding: 3px 0 0 5px;
+        }
+    }
+    .location{
+        a{
+            padding: 20px;
+            margin: 0 auto;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            border-radius: 30px;
+        }
+    }
+}
+/*# sourceURL=base/MODULE/_home.scss */

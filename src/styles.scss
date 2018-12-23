@@ -3,9 +3,9 @@
 @import 'scss/BASE/reset';
 @import 'scss/BASE/common';
 //LAYOUT FOLDER (Divide the page into sections. Layouts hold one or more modules together.)
-// @import 'app/scss/LAYOUT/layout';
+// @import 'scss/LAYOUT/layout';
 //MODULE FOLDER (Are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.)
-// @import 'app/scss/MODULE/homepage/header';
+@import 'scss/MODULE/home';
 
 //STATE FOLDER (Ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.)
 
@@ -18,4 +18,5 @@
     @import 'scss/STATE/browsers-edge';
 }
 //THEME FOLDER (Describe how modules or layouts might look)
-// @import 'app/scss/THEME/theme';
+@import 'scss/THEME/header';
+@import 'scss/THEME/footer';
