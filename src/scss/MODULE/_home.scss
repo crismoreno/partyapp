@@ -7,8 +7,35 @@
     .home-container{
         width: 100%;
     }
+    .codes-info{
+        .dress-code{
+            margin-bottom: 10px !important;
+        }
+        .dress-code, .food-code{
+            margin: 0 auto;
+        }
+        .dress-code-info{
+            padding: 10px 40px !important;
+        }
+        .food-code-info{
+            padding: 10px 50px !important;
+        }
+    }
+    .guests{
+        .left{
+            margin: 10px 0 !important;
+        }
+        .right{
+            margin: 10px 0 !important;
+        }
+        .guest-card{
+            width: 100% !important;
+        }
+    }
 }
-
+body{
+    background-image: url("assets/img/9xL3.gif");
+}
 .home-container{
     background-color: $yellow;
     margin-top: 120px;
@@ -20,10 +47,15 @@
         width: 130px;
         margin: -65px auto 14px auto;
     }
+    .location{
+        border-radius: 14px;
+    }
+    .host, .party, .codes-info{
+        border-radius: 30px;
+    }
     .host, .party, .location, .codes-info{
         margin: 0 0 20px 0;
         background-color: white;
-        border-radius: 14px;
         padding: 5px 20px;
         strong{
             font-size: 20px;
@@ -47,6 +79,7 @@
             width: 100%;
             text-align: center;
             border-radius: 30px;
+            margin-bottom: 20px;
         }
         .g-map-iframe{
             margin-bottom: 20px;
@@ -91,6 +124,9 @@
         }
     }
     .guests{
+        background-color: white;
+        border-radius: 14px;
+        padding: 20px 0;
         .left{
             margin: 10px 10px 0 0 ;
         }
@@ -122,6 +158,31 @@
                 }
             }
         }
+    }
+    .chosing-plan{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: white;
+        border-radius: 14px;
+        padding: 20px;
+        a{
+            padding: 5px;
+            text-align: center;
+            border-radius: 30px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .doodle{
+            background-color: #3798d4 !important;
+        }
+        .telepizza{
+            background-color: #e20119 !important;
+        }
+    }
+    .contact-form{
+        background-color: white;
+        padding: 20px;
+        border-radius: 14px;
     }
 }
 /*# sourceURL=base/MODULE/_home.scss */
