@@ -39,9 +39,9 @@ testem.log
 Thumbs.db
 
 # Environments
-.env
-src/environments/**
-src/environments/environments
-src/environments/environment.prod.ts
-src/environments/environment.ts
-environment
+# .env
+# src/environments/**
+# src/environments/environments
+# src/environments/environment.prod.ts
+# src/environments/environment.ts
+# environment

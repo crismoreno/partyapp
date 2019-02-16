@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build",
+    "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --prod",
     "start": "node server.js"
   },
   "private": true,
@@ -56,5 +55,6 @@
   "engines": {
     "node": "8.9.4",
     "npm": "6.4.1"
-  }
+  },
+  "heroku-run-build-script": true
 }
